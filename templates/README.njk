@@ -1,0 +1,20 @@
+<div align="center">
+
+# An abnormal undergraduate student
+
+</div>
+
+<div align="center">
+  <img src="https://grs.isok.dev/api?username=Howardzhangdqs&show_icons=true&theme=dark"/>
+</div>
+
+{% for section in sections %}
+{{ section.label }}:
+
+<div align="center">{%- for icon in section.icons %}<span style="background-color:#0d1117;padding:8px;border-radius:6px;display:inline-flex;align-items:center;"><img height="32" width="32" src="{{ icon.src }}" alt="{{ icon.name }}" /></span>&nbsp;{%- endfor %}</div>
+
+{% endfor %}
+
+---
+
+Some people saw that my original profile picture was a casual snapshot of cherries in an iron basin and thought it didn't look professional enough, so I changed my profile picture to a character from an ACG game.

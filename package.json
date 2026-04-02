@@ -1,0 +1,17 @@
+{
+  "name": "howardzhangdqs",
+  "private": true,
+  "scripts": {
+    "generate": "bun run generate.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/nunjucks": "^3.2.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  }
+}
