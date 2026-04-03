@@ -11,8 +11,7 @@
 {% for section in sections %}
 {{ section.label }}:
 
-<div align="center">{%- for icon in section.icons %}<span style="color:white;background-color:#0d1117;padding:8px;border-radius:6px;display:inline-flex;align-items:center;"><img height="32" width="32" src="{{ icon.src }}" alt="{{ icon.name }}" {% if icon.scale %}style="transform:scale({{ icon.scale }})"{% endif %} /></span>&nbsp;{%- endfor %}</div>
-
+<div align="center">{{ section.svg }}</div>
 {% endfor %}
 
 ---
