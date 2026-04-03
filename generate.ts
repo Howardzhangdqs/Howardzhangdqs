@@ -100,9 +100,12 @@ const ICON_SIZE = 32;
 const PADDING = (BOX_SIZE - ICON_SIZE) / 2;
 const GAP = 10;
 
-const sectionSvgs: string[] = [];
+const ASSETS_DIR = join(import.meta.dir, "assets");
 
-for (const section of sections) {
+const sectionFiles: string[] = [];
+
+for (let si = 0; si < sections.length; si++) {
+  const section = sections[si]!;
   const rowWidth = section.icons.length * BOX_SIZE + (section.icons.length - 1) * GAP;
   const svgWidth = rowWidth + 40;
   const svgHeight = BOX_SIZE + 20;
@@ -134,15 +137,17 @@ for (const section of sections) {
     iconParts.push(`</g>`);
   }
 
+  const fileName = `section-${si + 1}.svg`;
   const sectionSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}" viewBox="0 0 ${svgWidth} ${svgHeight}">
 ${iconParts.join("\n")}
 </svg>`;
-  sectionSvgs.push(sectionSvg);
+  await Bun.write(join(ASSETS_DIR, fileName), sectionSvg);
+  sectionFiles.push(`assets/${fileName}`);
 }
 
 nunjucks.configure(join(import.meta.dir, "templates"), { autoescape: false });
 
-const readme = nunjucks.render("README.njk", { sections: sections.map((s, i) => ({ label: s.label, svg: sectionSvgs[i] })) });
+const readme = nunjucks.render("README.njk", { sections: sections.map((s, i) => ({ label: s.label, svgPath: sectionFiles[i] })) });
 
 await Bun.write(join(import.meta.dir, "README.md"), readme);
 
