@@ -11,27 +11,27 @@
 
 My most commonly used programming languages:
 
-<div align="center"><img src="assets/section-1.svg" /></div>
+<div align="center"><img src="assets/section-1.svg?v=1775186342438" /></div>
 
 My most commonly used development environments:
 
-<div align="center"><img src="assets/section-2.svg" /></div>
+<div align="center"><img src="assets/section-2.svg?v=1775186342438" /></div>
 
 My frontend tech stack:
 
-<div align="center"><img src="assets/section-3.svg" /></div>
+<div align="center"><img src="assets/section-3.svg?v=1775186342438" /></div>
 
 My backend tech stack:
 
-<div align="center"><img src="assets/section-4.svg" /></div>
+<div align="center"><img src="assets/section-4.svg?v=1775186342438" /></div>
 
 My deep learning research:
 
-<div align="center"><img src="assets/section-5.svg" /></div>
+<div align="center"><img src="assets/section-5.svg?v=1775186342438" /></div>
 
 My favorite operating systems:
 
-<div align="center"><img src="assets/section-6.svg" /></div>
+<div align="center"><img src="assets/section-6.svg?v=1775186342438" /></div>
 
 
 <div align="center"><sub>✨ Icons with gradient borders are my favorites</sub></div>

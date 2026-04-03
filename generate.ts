@@ -201,9 +201,11 @@ ${iconParts.join("\n")}
   sectionFiles.push(`assets/${fileName}`);
 }
 
+const cacheBust = Date.now().toString();
+
 nunjucks.configure(join(import.meta.dir, "templates"), { autoescape: false });
 
-const readme = nunjucks.render("README.njk", { sections: sections.map((s, i) => ({ label: s.label, svgPath: sectionFiles[i] })) });
+const readme = nunjucks.render("README.njk", { sections: sections.map((s, i) => ({ label: s.label, svgPath: `${sectionFiles[i]}?v=${cacheBust}` })), cacheBust });
 
 await Bun.write(join(import.meta.dir, "README.md"), readme);
 
